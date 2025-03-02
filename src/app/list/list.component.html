@@ -1,21 +1,23 @@
 <h2>Presidents of Ireland</h2> 
 
 <ul>
+     <!-- ngFor is used to loop over presidents and display each president's name -->
     <li *ngFor="let president of presidents">
-        {{president.name}}
+        {{president.name}} <!-- Display the name of each president -->
     </li>
 </ul>
-
+<!-- Ordered list ol to display the names of presidents using the custom loop syntax @for -->
 <ol>
+        <!-- Loop through the presidents collection and display each president's name -->
     @for(pres of presidents;track pres){
-        <li>{{pres.name}}</li>
+        <li>{{pres.name}}<!-- Displayed the names of president--></li>
     }
 </ol>
 
-<h2>Presidents of Ireland</h2>
+<h2>Presidents of Ireland</h2> <!-- Heading to diplay names and terms-->>
 
-<ul>
+<ul>  <!-- ngFor is used to loop over presidents and display each president's name -->
     @for(president of presidents; track president){
-        <li>{{president.name}}, {{president.term}}</li>
+        <li>{{president.name}}, {{president.term}} <!-- Displayed name and terms of each president--></li>
     }
 </ul>
